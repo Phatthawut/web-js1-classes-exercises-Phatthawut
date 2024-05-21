@@ -55,3 +55,29 @@ product1.displayProduct();
 const totalPrice = product1.calculateTotal(salesTax);
 
 console.log(`Total Price (with tax): ฿${totalPrice.toFixed(2)}`);
+
+class mouseProduct {
+  constructor(brand, price) {
+    this.brand = brand;
+    this.price = price;
+  }
+  displayMouse() {
+    console.log(`Mouse Brand: ${this.brand}`);
+    console.log(`Mouse Type: ${this.price}`);
+  }
+  totalCal(mousePrice){
+    return this.price + this.price * vat;
+  }
+}
+
+const vat = 0.07;
+
+const mouse1 = new mouseProduct("demo shark", 999.99);
+const mouse2 = new mouseProduct("F301", 1252.45);
+const mouse3 = new mouseProduct("deathhader", 1311.99);
+
+mouse3.displayMouse();
+
+const totalPrice2 = mouse3.totalCal(vat);
+
+console.log(`Total Price (with tax): ฿${totalPrice2.toFixed(2)}`); 
