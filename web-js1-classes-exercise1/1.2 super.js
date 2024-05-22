@@ -64,3 +64,30 @@ console.log(`Animal speed is ${rabbit1.runSpeed}`);
 
 // with the super keyword we can extend methods from the parent class
 fish1.swim();
+
+
+class heroAcademy {
+  constructor (name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  specialMove(skillName) {
+    console.log(`${this.name} my special Move is ${skillName}`);
+  }
+}
+
+class Midori extends heroAcademy {
+  constructor (name, age, spMoveName) {
+    super(name, age)
+    this.spMoveName = spMoveName;
+  }
+  oneForAll(){
+    console.log(`${this.name} his special move is One For All`);
+    super.oneForAll(this.spMoveName)
+
+  }
+}
+
+const midori1 = new Midori ("Midori Ayoyama", 18 , "One For All");
+
+midori1.oneForAll()
